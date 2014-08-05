@@ -2,7 +2,12 @@
 
 
 ## Loading and preprocessing the data
-
+```{r}
+activity.z <- unz("activity.zip","activity.csv")
+setAs("character","myDate", function(from) as.Date(from, format="%Y-%m-%d") )
+activity <- read.csv(activity.z, colClasses=c("integer","myDate","integer"), na.strings="NA")
+str(activity)
+```
 
 
 ## What is mean total number of steps taken per day?
