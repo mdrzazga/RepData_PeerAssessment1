@@ -1,6 +1,6 @@
 # Reproducible Research: Peer Assessment 1
 
-pelase download ziped data from:
+download  data from:
   [http://github.com/mdrzazga/RepData_PeerAssessment1/raw/master/activity.zip]
 
 ## Loading and preprocessing the data
