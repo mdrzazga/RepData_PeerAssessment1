@@ -1,5 +1,7 @@
 # Reproducible Research: Peer Assessment 1
 
+pelase download ziped data from:
+  [http://github.com/mdrzazga/RepData_PeerAssessment1/raw/master/activity.zip]
 
 ## Loading and preprocessing the data
 ```{r}
@@ -59,6 +61,6 @@ library(lattice)
 activity$dayclass <- ifelse(weekdays(activity$date) %in% c("Saturday","Sunday"), "weekend", "weekday")
 activity.interval4dayclass <-aggregate(list(steps=activity$steps), list(dayclass = activity$dayclass, interval = activity$interval), mean, na.rm=T)
 
-xyplot(steps ~ interval | dayclass, data = activity.interval4dayclass, layout = c(1, 2), type="l")
+xyplot(steps ~ interval | dayclass, data = activity.interval4dayclass, layout = c(1, 2), type="l", ylab="Number of steps")
 
 ```
